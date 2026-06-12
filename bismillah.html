@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>🕌 Bismillah 🕌</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+font-family:Arial,sans-serif;
+background:linear-gradient(
+to bottom,
+#020617,
+#0f172a,
+#1e293b
+);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.container{
+z-index:10;
+max-width:800px;
+padding:20px;
+}
+
+h1{
+font-size:50px;
+color:#f8d568;
+text-shadow:
+0 0 10px #f8d568,
+0 0 20px #f8d568;
+}
+
+.arabic{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.dua{
+font-size:22px;
+line-height:1.8;
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+margin-top:25px;
+}
+
+.moon{
+position:absolute;
+top:30px;
+right:40px;
+font-size:120px;
+}
+
+.mosque{
+position:absolute;
+bottom:0;
+width:100%;
+font-size:90px;
+opacity:0.2;
+}
+
+.star{
+position:absolute;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%{opacity:0.2;}
+50%{opacity:1;}
+100%{opacity:0.2;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="moon">🌙</div>
+
+<div class="container">
+
+<div class="arabic">
+بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+</div>
+
+<h1>
+🕌 Welcome 🕌
+</h1>
+
+<div class="dua">
+
+🤲🏻 May Allah protect your smile...<br><br>
+
+🩵 May Allah fill your life with happiness...<br><br>
+
+✨ May Allah bless your future...<br><br>
+
+🌷 May Allah grant success in everything good...<br><br>
+
+🤲🏻 Ameen...
+
+</div>
+
+<button onclick="nextPage()">
+
+✨ Enter The Universe ✨
+
+</button>
+
+</div>
+
+<div class="mosque">
+🕌 🕌 🕌 🕌 🕌
+</div>
+
+<script>
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="⭐";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(star);
+
+}
+
+function nextPage(){
+
+window.location.href=
+"universe.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
