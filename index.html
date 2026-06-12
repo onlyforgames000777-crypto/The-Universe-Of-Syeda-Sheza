@@ -2,108 +2,311 @@
 <html>
 
 <head>
-    <title>The Universe of Syeda Sheza</title>
 
-    <style>
-        body {
-            margin: 0;
-            background: linear-gradient(to bottom, #050816, #09132b, #0f1e44);
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            overflow: hidden;
-        }
+<title>🌌 The Universe Of Syeda Sheza 🌌</title>
 
-        h1 {
-            margin-top: 120px;
-            font-size: 50px;
-        }
+<style>
 
-        p {
-            font-size: 20px;
-        }
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+font-family:Arial,sans-serif;
 
-        input {
-            padding: 12px;
-            border-radius: 20px;
-            border: none;
-            text-align: center;
-            font-size: 18px;
-        }
+background:
+linear-gradient(
+to bottom,
+#020617,
+#0f172a,
+#1e293b
+);
 
-        button {
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            font-size: 18px;
-            margin-top: 20px;
-            cursor: pointer;
-        }
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
 
-        .moon {
-            font-size: 100px;
-            margin-top: 40px;
-        }
+.container{
+z-index:10;
+position:relative;
+}
 
-        .hint {
-            margin-top: 20px;
-            color: #bde0ff;
-        }
-    </style>
+h1{
+font-size:55px;
+text-shadow:
+0 0 10px white,
+0 0 20px #60a5fa,
+0 0 30px #60a5fa;
+}
+
+.subtitle{
+font-size:22px;
+margin-bottom:20px;
+}
+
+input{
+
+padding:15px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:20px;
+
+width:250px;
+
+text-align:center;
+
+}
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+margin:10px;
+
+cursor:pointer;
+
+}
+
+.moon{
+
+position:absolute;
+
+top:30px;
+
+right:50px;
+
+font-size:120px;
+
+animation:float 4s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.star{
+
+position:absolute;
+
+color:white;
+
+animation:twinkle 3s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:0.2;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+opacity:0.2;
+}
+
+}
+
+.floating{
+
+position:absolute;
+
+font-size:30px;
+
+animation:rise 12s linear infinite;
+
+}
+
+@keyframes rise{
+
+from{
+transform:translateY(120vh);
+}
+
+to{
+transform:translateY(-120vh);
+}
+
+}
+
+#hint{
+
+color:#93c5fd;
+
+margin-top:20px;
+
+font-size:20px;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <div class="moon">🌙</div>
+<div class="moon">
+🌙
+</div>
 
-    <h1>Syeda Sheza's Universe 🩵✨</h1>
+<div class="container">
 
-    <p>
-        A special universe awaits...
-        🌌✨🌙🩵💫🦋🌹
-    </p>
+<h1>
+🌌 Syeda Sheza's Universe 🌌
+</h1>
 
-    <input type="password" id="password" placeholder="Enter Password">
+<p class="subtitle">
 
-    <br>
+✨🩵🌙💫🦋🌹☁️🎀🪄💌🤲🏻🌷✨
 
-    <button onclick="checkPassword()">
-        Unlock ✨
-    </button>
+<br><br>
 
-    <br>
+A special universe awaits...
 
-    <button onclick="showHint()">
-        🎂 Need A Hint?
-    </button>
+<br>
 
-    <p id="hint" class="hint"></p>
+Only one person can enter...
 
-    <script>
+</p>
 
-        function showHint() {
+<input
+type="password"
+id="password"
+placeholder="🔐 Password">
 
-            document.getElementById("hint").innerHTML =
-                "The day Allah blessed the world with someone special 🎂🩵";
-        }
+<br>
 
-        function checkPassword() {
+<button onclick="checkPassword()">
 
-            let pass =
-                document.getElementById("password").value;
+✨ Unlock Universe ✨
 
-            if (pass == "0604") {
+</button>
 
-                window.location.href =
-                    "bismillah.html";
+<br>
 
-            } else {
+<button onclick="showHint()">
 
-                alert("Wrong password 😭🩵");
-            }
-        }
+🎂 Need A Hint?
 
-    </script>
+</button>
+
+<p id="hint"></p>
+
+</div>
+
+<script>
+
+for(let i=0;i<80;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="⭐";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(star);
+
+}
+
+let emojis=[
+"🩵",
+"🌹",
+"🦋",
+"💫",
+"✨",
+"🌙"
+];
+
+for(let i=0;i<40;i++){
+
+let e=document.createElement("div");
+
+e.className="floating";
+
+e.innerHTML=
+emojis[
+Math.floor(
+Math.random()*emojis.length
+)
+];
+
+e.style.left=
+Math.random()*100+"vw";
+
+e.style.animationDuration=
+(8+Math.random()*10)+"s";
+
+document.body.appendChild(e);
+
+}
+
+function showHint(){
+
+document.getElementById("hint").innerHTML=
+
+"🎂 The day Allah blessed the world with someone special... 🩵✨";
+
+}
+
+function checkPassword(){
+
+let pass=
+
+document.getElementById("password").value;
+
+if(pass=="0604"){
+
+alert(
+"✨ Correct 😭🩵✨"
+);
+
+window.location.href=
+"bismillah.html";
+
+}
+
+else{
+
+alert(
+"😭 Wrong password... Try again 🩵"
+);
+
+}
+
+}
+
+</script>
 
 </body>
 
