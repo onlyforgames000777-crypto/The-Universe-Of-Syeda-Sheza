@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>🌙 The Final Message 🌙</title>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+height:100vh;
+background:linear-gradient(
+to bottom,
+#020617,
+#0f172a,
+#1e293b
+);
+font-family:Arial,sans-serif;
+color:white;
+text-align:center;
+}
+
+.container{
+position:relative;
+z-index:10;
+padding-top:40px;
+max-width:900px;
+margin:auto;
+}
+
+.moon{
+font-size:120px;
+animation:float 5s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+.photo{
+
+width:260px;
+height:260px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:5px solid white;
+
+box-shadow:
+0 0 25px white,
+0 0 50px #60a5fa,
+0 0 80px #60a5fa;
+
+margin-top:15px;
+
+}
+
+h1{
+
+font-size:55px;
+
+text-shadow:
+0 0 15px white,
+0 0 30px #60a5fa;
+
+}
+
+.message{
+
+font-size:24px;
+
+line-height:1.9;
+
+padding:20px;
+
+}
+
+.names{
+
+font-size:30px;
+
+line-height:2;
+
+margin-top:20px;
+
+}
+
+.star{
+position:absolute;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%{opacity:0.2;}
+50%{opacity:1;}
+100%{opacity:0.2;}
+}
+
+.floating{
+position:absolute;
+font-size:30px;
+animation:rise 12s linear infinite;
+}
+
+@keyframes rise{
+from{
+transform:translateY(120vh);
+}
+to{
+transform:translateY(-120vh);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="moon">
+🌙
+</div>
+
+<h1>
+✨ Syeda Sheza ✨
+</h1>
+
+<img
+src="IMG-20260529-WA0018.jpg"
+class="photo">
+
+<div class="message">
+
+🩵 Thank you for every beautiful moment...
+
+<br><br>
+
+🌷 Thank you for every memory...
+
+<br><br>
+
+✨ Thank you for every effort...
+
+<br><br>
+
+💫 Thank you for every conversation...
+
+<br><br>
+
+🌙 Thank you for being part of my story...
+
+<br><br>
+
+🤲🏻 May Allah protect your smile,
+bless your future,
+and fill your life with happiness...
+
+Ameen.
+
+</div>
+
+<div class="names">
+
+🩵 Jaan
+
+<br>
+
+🌙 Buddy
+
+<br>
+
+✨ Darling
+
+<br>
+
+🌷 Sweetheart
+
+</div>
+
+<div style="font-size:32px;margin-top:25px;">
+
+💌 Thank you for being Syeda Sheza 💌
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<180;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="⭐";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(star);
+
+}
+
+let emojis=[
+"🩵",
+"🌹",
+"🦋",
+"💫",
+"✨",
+"🌙"
+];
+
+for(let i=0;i<70;i++){
+
+let e=document.createElement("div");
+
+e.className="floating";
+
+e.innerHTML=
+emojis[
+Math.floor(
+Math.random()*emojis.length
+)
+];
+
+e.style.left=
+Math.random()*100+"vw";
+
+e.style.animationDuration=
+(8+Math.random()*10)+"s";
+
+document.body.appendChild(e);
+
+}
+
+</script>
+
+</body>
+
+</html>
