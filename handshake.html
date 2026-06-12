@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>🤝 First Handshake 🤝</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+font-family:Arial,sans-serif;
+background:linear-gradient(
+to bottom,
+#020617,
+#0f172a,
+#1e293b
+);
+color:white;
+text-align:center;
+}
+
+.container{
+padding-top:80px;
+position:relative;
+z-index:10;
+}
+
+h1{
+font-size:55px;
+text-shadow:
+0 0 15px white,
+0 0 30px #60a5fa;
+}
+
+.date{
+font-size:28px;
+color:#93c5fd;
+margin-top:10px;
+}
+
+.memory{
+
+font-size:24px;
+
+max-width:800px;
+
+margin:auto;
+
+line-height:1.9;
+
+padding:30px;
+
+}
+
+.handshake{
+
+font-size:120px;
+
+animation:float 4s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.star{
+position:absolute;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+
+0%{opacity:0.2;}
+50%{opacity:1;}
+100%{opacity:0.2;}
+
+}
+
+button{
+
+padding:15px 30px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+margin-top:20px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+🤝 First Handshake 🤝
+</h1>
+
+<div class="date">
+21 March 2026
+</div>
+
+<div class="handshake">
+🤝
+</div>
+
+<div class="memory">
+
+✨🩵🌙
+
+To the world...
+
+it was just a handshake.
+
+But to me...
+
+it became a memory.
+
+A small moment.
+
+A simple gesture.
+
+Yet one that I still remember.
+
+🩵✨🌙
+
+</div>
+
+<button onclick="location.href='thankyou.html'">
+
+🌷 Continue
+
+</button>
+
+</div>
+
+<script>
+
+for(let i=0;i<150;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="⭐";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(star);
+
+}
+
+</script>
+
+</body>
+
+</html>
