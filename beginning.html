@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>💬 Where It All Began 💬</title>
+
+<style>
+
+body{
+margin:0;
+background:linear-gradient(
+to bottom,
+#020617,
+#0f172a,
+#1e293b
+);
+font-family:Arial,sans-serif;
+color:white;
+min-height:100vh;
+overflow:hidden;
+}
+
+.container{
+padding:30px;
+max-width:800px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+font-size:45px;
+margin-bottom:40px;
+}
+
+.chat{
+padding:15px;
+border-radius:20px;
+margin:15px;
+max-width:70%;
+font-size:20px;
+}
+
+.left{
+background:#1e40af;
+margin-right:auto;
+}
+
+.right{
+background:#2563eb;
+margin-left:auto;
+}
+
+.story{
+text-align:center;
+font-size:25px;
+margin-top:40px;
+line-height:1.8;
+}
+
+button{
+display:block;
+margin:40px auto;
+padding:15px 30px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+}
+
+.star{
+position:absolute;
+animation:twinkle 3s infinite;
+}
+
+@keyframes twinkle{
+0%{opacity:0.3;}
+50%{opacity:1;}
+100%{opacity:0.3;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>
+💬 Where It All Began 💬
+</h1>
+
+<div class="chat left">
+😭 Maths is too easy...
+</div>
+
+<div class="chat right">
+😭 You're flexing...
+</div>
+
+<div class="chat left">
+😭 Am I really flexing?
+</div>
+
+<div class="story">
+
+🩵✨🌙💫
+
+What started as a random conversation...
+
+became one of the most beautiful chapters of my life.
+
+🩵✨🌙💫
+
+</div>
+
+<button onclick="nextPage()">
+
+⏳ Continue
+
+</button>
+
+</div>
+
+<script>
+
+for(let i=0;i<100;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="⭐";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+document.body.appendChild(star);
+
+}
+
+function nextPage(){
+
+alert("Timeline page coming next 😭🩵");
+
+}
+
+</script>
+
+</body>
+
+</html>
