@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Universe of Syeda Sheza</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(to bottom, #050816, #09132b, #0f1e44);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 120px;
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        input {
+            padding: 12px;
+            border-radius: 20px;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .moon {
+            font-size: 100px;
+            margin-top: 40px;
+        }
+
+        .hint {
+            margin-top: 20px;
+            color: #bde0ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="moon">🌙</div>
+
+    <h1>Syeda Sheza's Universe 🩵✨</h1>
+
+    <p>
+        A special universe awaits...
+        🌌✨🌙🩵💫🦋🌹
+    </p>
+
+    <input type="password" id="password" placeholder="Enter Password">
+
+    <br>
+
+    <button onclick="checkPassword()">
+        Unlock ✨
+    </button>
+
+    <br>
+
+    <button onclick="showHint()">
+        🎂 Need A Hint?
+    </button>
+
+    <p id="hint" class="hint"></p>
+
+    <script>
+
+        function showHint() {
+
+            document.getElementById("hint").innerHTML =
+                "The day Allah blessed the world with someone special 🎂🩵";
+        }
+
+        function checkPassword() {
+
+            let pass =
+                document.getElementById("password").value;
+
+            if (pass == "0604") {
+
+                window.location.href =
+                    "bismillah.html";
+
+            } else {
+
+                alert("Wrong password 😭🩵");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
