@@ -3,16 +3,16 @@
 
 <head>
 
-<title>🌌 The Universe Of Syeda Sheza 🌌</title>
+<title>✨ Welcome ✨</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 body{
 margin:0;
-height:100vh;
 overflow:hidden;
 font-family:Arial,sans-serif;
-
 background:
 linear-gradient(
 to bottom,
@@ -20,91 +20,70 @@ to bottom,
 #0f172a,
 #1e293b
 );
-
-display:flex;
-justify-content:center;
-align-items:center;
 color:white;
 text-align:center;
 }
 
 .container{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+width:90%;
+
 z-index:10;
-position:relative;
+
 }
 
 h1{
-font-size:55px;
+
+font-size:52px;
+
+margin-bottom:15px;
+
 text-shadow:
-0 0 10px white,
-0 0 20px #60a5fa,
+0 0 15px white,
 0 0 30px #60a5fa;
+
+animation:glow 3s infinite;
+
 }
 
 .subtitle{
+
 font-size:22px;
-margin-bottom:20px;
-}
 
-input{
+line-height:1.8;
 
-padding:15px;
-
-border:none;
-
-border-radius:30px;
-
-font-size:20px;
-
-width:250px;
-
-text-align:center;
+margin-bottom:30px;
 
 }
 
 button{
 
-padding:15px 30px;
+padding:16px 35px;
 
 border:none;
 
-border-radius:30px;
+border-radius:40px;
 
-font-size:18px;
-
-margin:10px;
+font-size:20px;
 
 cursor:pointer;
 
-}
-
-.moon{
-
-position:absolute;
-
-top:30px;
-
-right:50px;
-
-font-size:120px;
-
-animation:float 4s infinite ease-in-out;
+transition:0.4s;
 
 }
 
-@keyframes float{
+button:hover{
 
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-15px);
-}
-
-100%{
-transform:translateY(0);
-}
+transform:scale(1.08);
 
 }
 
@@ -112,57 +91,63 @@ transform:translateY(0);
 
 position:absolute;
 
-color:white;
+font-size:14px;
 
 animation:twinkle 3s infinite;
 
 }
 
-@keyframes twinkle{
-
-0%{
-opacity:0.2;
-}
-
-50%{
-opacity:1;
-}
-
-100%{
-opacity:0.2;
-}
-
-}
-
-.floating{
+.float{
 
 position:absolute;
 
-font-size:30px;
+font-size:28px;
 
-animation:rise 12s linear infinite;
+animation:rise linear infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes glow{
+
+0%{
+text-shadow:
+0 0 10px white,
+0 0 20px #60a5fa;
+}
+
+50%{
+text-shadow:
+0 0 20px white,
+0 0 50px #93c5fd;
+}
+
+100%{
+text-shadow:
+0 0 10px white,
+0 0 20px #60a5fa;
+}
+
+}
+
+@keyframes twinkle{
+
+0%{opacity:0.2;}
+50%{opacity:1;}
+100%{opacity:0.2;}
 
 }
 
 @keyframes rise{
 
 from{
-transform:translateY(120vh);
+transform:translateY(110vh);
 }
 
 to{
 transform:translateY(-120vh);
 }
-
-}
-
-#hint{
-
-color:#93c5fd;
-
-margin-top:20px;
-
-font-size:20px;
 
 }
 
@@ -172,95 +157,99 @@ font-size:20px;
 
 <body>
 
-<div class="moon">
-🌙
-</div>
-
 <div class="container">
 
-<h1>
-🌌 Syeda Sheza's Universe 🌌
-</h1>
+<h1 id="title"></h1>
 
-<p class="subtitle">
+<div class="subtitle">
 
-✨🩵🌙💫🦋🌹☁️🎀🪄💌🤲🏻🌷✨
+🩵 A small universe filled with memories...
 
 <br><br>
 
-A special universe awaits...
+🌙 Built with gratitude, duas and moments that words alone cannot explain.
 
-<br>
+</div>
 
-Only one person can enter...
+<button
+onclick="location.href='password.html'">
 
-</p>
-
-<input
-type="password"
-inputmode="numeric"
-pattern="[0-9]*"
-maxlength="4"
-id="password"
-placeholder="🔐 4-Digit PIN">
-
-<br>
-
-<button onclick="checkPassword()">
-
-✨ Unlock Universe ✨
+✨ Enter The Universe ✨
 
 </button>
-
-<br>
-
-<button onclick="showHint()">
-
-🎂 Need A Hint?
-
-</button>
-
-<p id="hint"></p>
 
 </div>
 
 <script>
 
-for(let i=0;i<80;i++){
+const text=
+"Welcome, Syeda Sheza 🌷";
 
-let star=document.createElement("div");
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document
+.getElementById(
+"title"
+)
+.innerHTML+=
+text.charAt(i);
+
+i++;
+
+setTimeout(type,80);
+
+}
+
+}
+
+type();
+
+for(let i=0;i<300;i++){
+
+let star=
+document.createElement("div");
 
 star.className="star";
 
 star.innerHTML="⭐";
 
-star.style.left=Math.random()*100+"vw";
+star.style.left=
+Math.random()*100+"vw";
 
-star.style.top=Math.random()*100+"vh";
+star.style.top=
+Math.random()*100+"vh";
+
+star.style.animationDuration=
+(2+Math.random()*5)+"s";
 
 document.body.appendChild(star);
 
 }
 
-let emojis=[
+const items=[
 "🩵",
-"🌹",
-"🦋",
-"💫",
+"🌙",
 "✨",
-"🌙"
+"🦋",
+"🌹",
+"💫"
 ];
 
-for(let i=0;i<40;i++){
+for(let i=0;i<100;i++){
 
-let e=document.createElement("div");
+let e=
+document.createElement("div");
 
-e.className="floating";
+e.className="float";
 
 e.innerHTML=
-emojis[
+items[
 Math.floor(
-Math.random()*emojis.length
+Math.random()*items.length
 )
 ];
 
@@ -268,44 +257,12 @@ e.style.left=
 Math.random()*100+"vw";
 
 e.style.animationDuration=
-(8+Math.random()*10)+"s";
+(8+Math.random()*12)+"s";
+
+e.style.animationDelay=
+Math.random()*10+"s";
 
 document.body.appendChild(e);
-
-}
-
-function showHint(){
-
-document.getElementById("hint").innerHTML=
-
-"🎂 The day Allah blessed the world with someone special... 🩵✨";
-
-}
-
-function checkPassword(){
-
-let pass=
-
-document.getElementById("password").value;
-
-if(pass=="0604"){
-
-alert(
-"✨ Correct 😭🩵✨"
-);
-
-window.location.href=
-"bismillah.html";
-
-}
-
-else{
-
-alert(
-"😭 Wrong password... Try again 🩵"
-);
-
-}
 
 }
 
