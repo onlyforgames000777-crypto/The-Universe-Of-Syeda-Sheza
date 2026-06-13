@@ -192,3 +192,207 @@ the most important one is simple:
 🌙🩵🌹🦋
 
 </div>
+<button onclick="location.href='apology.html'">
+💌 Continue
+</button>
+
+<script>
+
+let discovered = 0;
+
+const reasons = [
+
+"🩵 You value my words.",
+"🌷 You make ordinary days special.",
+"✨ You stayed.",
+"💫 You care.",
+"🌙 You listen.",
+"🦋 You make me smile.",
+"🌹 You are kind.",
+"🎀 You are memorable.",
+"🤲🏻 You respect my feelings.",
+"💌 You became part of my story.",
+
+"⭐ You make conversations beautiful.",
+"🌷 You are thoughtful.",
+"🩵 You are supportive.",
+"✨ You understand me.",
+"🌙 You are patient.",
+"🦋 You make memories meaningful.",
+"💫 You are unique.",
+"🌹 You make me laugh.",
+"🎀 You remember small things.",
+"🤍 You are genuine.",
+
+"🩵 You are caring.",
+"🌙 You are calm.",
+"✨ You brighten my day.",
+"💌 You make effort.",
+"🌷 You are sweet.",
+"⭐ You are respectful.",
+"🦋 You are fun to talk to.",
+"💫 You are sincere.",
+"🌹 You are unforgettable.",
+"🤍 You make life interesting.",
+
+"🩵 You are thoughtful.",
+"🌙 You are special.",
+"✨ You are lovely.",
+"💌 You make moments memorable.",
+"🌷 You are amazing.",
+"⭐ You are wonderful.",
+"🦋 You are precious.",
+"💫 You are appreciated.",
+"🌹 You are valued.",
+"🤍 You are important.",
+
+"🩵 Thank you for every conversation.",
+"🌙 Thank you for every memory.",
+"✨ Thank you for every effort.",
+"💌 Thank you for every smile.",
+"🌷 Thank you for staying.",
+"⭐ Thank you for caring.",
+"🦋 Thank you for listening.",
+"💫 Thank you for understanding.",
+"🌹 Thank you for your kindness.",
+"🤍 Thank you for being you."
+
+];
+
+while(reasons.length < 100){
+
+reasons.push(
+"🩵 Another reason: you're appreciated."
+);
+
+}
+
+const area =
+document.getElementById(
+"balloonArea"
+);
+
+for(let i=0;i<100;i++){
+
+let b =
+document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML="🎈";
+
+b.style.left=
+Math.random()*90+"%";
+
+b.style.top=
+Math.random()*850+"px";
+
+b.onclick=function(){
+
+if(
+b.innerHTML==="💥"
+)return;
+
+b.innerHTML="💥";
+
+discovered++;
+
+document.getElementById(
+"counter"
+).innerHTML=
+"🎈 " + discovered + " / 100 discovered";
+
+document.getElementById(
+"reason"
+).innerHTML=
+reasons[i];
+
+document.getElementById(
+"bar"
+).style.width=
+(discovered)+"%";
+
+if(discovered===100){
+
+document.getElementById(
+"reward"
+).style.display="block";
+
+window.scrollTo({
+
+top:document.body.scrollHeight,
+
+behavior:"smooth"
+
+});
+
+}
+
+};
+
+area.appendChild(b);
+
+}
+
+for(let i=0;i<250;i++){
+
+let star =
+document.createElement("div");
+
+star.className="star";
+
+star.innerHTML="⭐";
+
+star.style.left=
+Math.random()*100+"vw";
+
+star.style.top=
+Math.random()*100+"vh";
+
+star.style.animationDuration=
+(2+Math.random()*4)+"s";
+
+document.body.appendChild(star);
+
+}
+
+const items=[
+"🦋",
+"🌹",
+"✨",
+"🩵",
+"🌙",
+"💫"
+];
+
+for(let i=0;i<100;i++){
+
+let e =
+document.createElement("div");
+
+e.className="float";
+
+e.innerHTML=
+items[
+Math.floor(
+Math.random()*items.length
+)
+];
+
+e.style.left=
+Math.random()*100+"vw";
+
+e.style.animationDuration=
+(8+Math.random()*12)+"s";
+
+e.style.animationDelay=
+Math.random()*10+"s";
+
+document.body.appendChild(e);
+
+}
+
+</script>
+
+</body>
+</html>
