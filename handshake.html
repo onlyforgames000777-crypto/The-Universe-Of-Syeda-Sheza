@@ -12,8 +12,7 @@
 body{
 margin:0;
 font-family:Arial,sans-serif;
-background:
-linear-gradient(
+background:linear-gradient(
 to bottom,
 #020617,
 #0f172a,
@@ -38,111 +37,36 @@ margin-bottom:25px;
 }
 
 .handshake{
-
 font-size:140px;
-
 cursor:pointer;
-
 margin-top:30px;
-
 transition:0.4s;
-
-user-select:none;
-
 }
 
 .handshake:hover{
-
 transform:scale(1.1);
-
 }
 
 .card{
-
 display:none;
-
 width:90%;
-
 max-width:850px;
-
 margin:25px auto;
-
 padding:25px;
-
 border-radius:25px;
-
-background:
-rgba(255,255,255,0.08);
-
+background:rgba(255,255,255,0.08);
 font-size:24px;
-
 line-height:1.8;
-
-animation:fade 0.7s;
-
 }
 
-button{
-
+#continueBtn{
+display:none;
 padding:15px 30px;
-
 border:none;
-
 border-radius:30px;
-
 font-size:18px;
-
 cursor:pointer;
-
 margin:20px;
-
-}
-
-.star{
-position:fixed;
-pointer-events:none;
-animation:twinkle 3s infinite;
-}
-
-.float{
-position:fixed;
-pointer-events:none;
-font-size:28px;
-animation:rise linear infinite;
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(20px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-@keyframes twinkle{
-
-0%{opacity:0.2;}
-50%{opacity:1;}
-100%{opacity:0.2;}
-
-}
-
-@keyframes rise{
-
-from{
-transform:translateY(110vh);
-}
-
-to{
-transform:translateY(-120vh);
-}
-
 }
 
 </style>
@@ -156,36 +80,28 @@ transform:translateY(-120vh);
 </h1>
 
 <div class="subtitle">
-
-✨ Tap the handshake to unlock memories
-
+✨ Tap the handshake 3 times
 </div>
 
-<div
-class="handshake"
-onclick="unlock1()">
-
+<div class="handshake" onclick="unlock()">
 🤝
-
 </div>
 
 <div id="m1" class="card">
 
-🌙
-
-21 March 2026
+🌙 21 March 2026
 
 <br><br>
 
-To everyone else...
-
+To everyone else,
 it was just a handshake.
 
 <br><br>
 
-But some moments become memories.
+To me,
+it became a memory.
 
-🩵✨
+🩵
 
 </div>
 
@@ -195,47 +111,28 @@ But some moments become memories.
 
 Funny thing is...
 
-our story didn't start with a handshake.
-
-<br><br>
-
-It started when I said:
+our story started because of:
 
 <b>"Maths is too easy."</b>
 
 😭
 
-And you thought I was flexing.
-
-<br><br>
-
-Who would've thought that conversation would lead here?
-
-🩵✨🌙
-
 </div>
 
 <div id="m3" class="card">
 
-🌷
+✨
 
-A handshake lasts seconds.
+Some moments last seconds.
 
-A memory lasts longer.
+Some memories last forever.
 
-<br><br>
-
-And somehow,
-
-that simple moment became one of my favourites.
-
-🤝🩵✨
+🤝🩵🌙
 
 </div>
 
 <button
 id="continueBtn"
-style="display:none"
 onclick="location.href='thankyou.html'">
 
 🎁 Continue To Gift Room
@@ -244,99 +141,39 @@ onclick="location.href='thankyou.html'">
 
 <script>
 
-let stage=0;
+let stage = 0;
 
-function unlock1(){
+function unlock(){
 
 stage++;
 
-if(stage===1){
+if(stage==1){
 
-document
-.getElementById("m1")
-.style.display="block";
-
-}
-
-if(stage===2){
-
-document
-.getElementById("m2")
-.style.display="block";
+document.getElementById(
+"m1"
+).style.display="block";
 
 }
 
-if(stage===3){
+if(stage==2){
 
-document
-.getElementById("m3")
-.style.display="block";
+document.getElementById(
+"m2"
+).style.display="block";
 
-document
-.getElementById(
+}
+
+if(stage==3){
+
+document.getElementById(
+"m3"
+).style.display="block";
+
+document.getElementById(
 "continueBtn"
-)
-.style.display="inline-block";
+).style.display="inline-block";
 
 }
-
-}
-
-for(let i=0;i<250;i++){
-
-let star=
-document.createElement("div");
-
-star.className="star";
-
-star.innerHTML="⭐";
-
-star.style.left=
-Math.random()*100+"vw";
-
-star.style.top=
-Math.random()*100+"vh";
-
-star.style.animationDuration=
-(2+Math.random()*4)+"s";
-
-document.body.appendChild(star);
-
-}
-
-const items=[
-"🦋",
-"🌹",
-"✨",
-"🩵",
-"🌙",
-"💫"
-];
-
-for(let i=0;i<80;i++){
-
-let e=
-document.createElement("div");
-
-e.className="float";
-
-e.innerHTML=
-items[
-Math.floor(
-Math.random()*items.length
-)
-];
-
-e.style.left=
-Math.random()*100+"vw";
-
-e.style.animationDuration=
-(8+Math.random()*10)+"s";
-
-e.style.animationDelay=
-Math.random()*10+"s";
-
-document.body.appendChild(e);
 
 }
 
