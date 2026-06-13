@@ -5,103 +5,251 @@
 
 <title>🌌 The Universe Of Syeda Sheza 🌌</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 
 body{
 margin:0;
 overflow:hidden;
-height:100vh;
-background:linear-gradient(
-to bottom,
-#020617,
-#0f172a,
-#1e293b
-);
 font-family:Arial,sans-serif;
+background:
+radial-gradient(
+circle at center,
+#0f172a,
+#020617
+);
 color:white;
 text-align:center;
 }
 
-.container{
-position:relative;
-z-index:10;
-padding-top:60px;
-}
-
 h1{
-font-size:50px;
+position:absolute;
+top:20px;
+width:100%;
+font-size:42px;
+z-index:5;
 text-shadow:
 0 0 15px white,
-0 0 30px #60a5fa,
-0 0 50px #60a5fa;
+0 0 30px #60a5fa;
 }
 
 .subtitle{
-font-size:22px;
-line-height:1.8;
-margin-bottom:20px;
+position:absolute;
+top:90px;
+width:100%;
+font-size:20px;
+z-index:5;
 }
 
-.photo{
-width:260px;
-height:260px;
-object-fit:cover;
+.center{
+
+position:absolute;
+
+top:50%;
+
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+z-index:10;
+
+}
+
+.center img{
+
+width:220px;
+
+height:220px;
+
 border-radius:50%;
-border:5px solid white;
+
+object-fit:cover;
+
+border:6px solid white;
+
 box-shadow:
-0 0 25px white,
-0 0 50px #60a5fa,
-0 0 80px #60a5fa;
-animation:float 4s infinite ease-in-out;
+0 0 30px white,
+0 0 70px #60a5fa,
+0 0 120px #93c5fd;
+
+cursor:pointer;
+
+transition:0.5s;
+
 }
 
-.moon{
+.center img:hover{
+
+transform:scale(1.08);
+
+}
+
+.orbit{
+
 position:absolute;
-top:20px;
-right:40px;
-font-size:120px;
-animation:float 5s infinite ease-in-out;
+
+top:50%;
+
+left:50%;
+
+transform:
+translate(-50%,-50%);
+
+border:
+1px solid rgba(255,255,255,0.15);
+
+border-radius:50%;
+
 }
 
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-15px);}
-100%{transform:translateY(0);}
+.orbit1{
+width:340px;
+height:340px;
+animation:spin 25s linear infinite;
 }
 
-.star{
+.orbit2{
+width:500px;
+height:500px;
+animation:spin 40s linear infinite;
+}
+
+.orbit3{
+width:650px;
+height:650px;
+animation:spin 55s linear infinite;
+}
+
+.planet{
+
 position:absolute;
-animation:twinkle 3s infinite;
+
+top:-20px;
+
+left:50%;
+
+transform:
+translateX(-50%);
+
+font-size:38px;
+
 }
 
-@keyframes twinkle{
-0%{opacity:0.3;}
-50%{opacity:1;}
-100%{opacity:0.3;}
-}
+.message{
 
-.floating{
+display:none;
+
 position:absolute;
-font-size:30px;
-animation:rise 12s linear infinite;
-}
 
-@keyframes rise{
-from{
-transform:translateY(120vh);
-}
-to{
-transform:translateY(-120vh);
-}
+top:78%;
+
+left:50%;
+
+transform:
+translateX(-50%);
+
+width:90%;
+
+max-width:800px;
+
+background:
+rgba(255,255,255,0.08);
+
+padding:20px;
+
+border-radius:20px;
+
+font-size:24px;
+
+line-height:1.8;
+
+z-index:10;
+
 }
 
 button{
+
+position:absolute;
+
+bottom:25px;
+
+left:50%;
+
+transform:
+translateX(-50%);
+
 padding:15px 30px;
-font-size:18px;
+
 border:none;
+
 border-radius:30px;
+
+font-size:18px;
+
 cursor:pointer;
-margin-top:20px;
+
+z-index:10;
+
+}
+
+.star{
+
+position:absolute;
+
+font-size:14px;
+
+animation:twinkle 3s infinite;
+
+}
+
+.float{
+
+position:absolute;
+
+font-size:26px;
+
+animation:floatUp linear infinite;
+
+}
+
+@keyframes spin{
+
+from{
+transform:
+translate(-50%,-50%)
+rotate(0deg);
+}
+
+to{
+transform:
+translate(-50%,-50%)
+rotate(360deg);
+}
+
+}
+
+@keyframes twinkle{
+
+0%{opacity:0.2;}
+50%{opacity:1;}
+100%{opacity:0.2;}
+
+}
+
+@keyframes floatUp{
+
+from{
+transform:
+translateY(110vh);
+}
+
+to{
+transform:
+translateY(-120vh);
+}
+
 }
 
 </style>
@@ -110,80 +258,122 @@ margin-top:20px;
 
 <body>
 
-<div class="moon">
-🌙
-</div>
-
-<div class="container">
-
 <h1>
 🌌 The Universe Of Syeda Sheza 🌌
 </h1>
 
 <div class="subtitle">
 
-🩵✨🌙💫🦋🌹☁️🎀🪄💌🤲🏻🌷✨
+🩵 Every universe has a center...
 
-<br><br>
-
-Among billions of people...
-
-<br>
-
-Allah wrote your name into my story...
-
-🩵
+✨ This one has yours.
 
 </div>
+
+<div class="orbit orbit1">
+<div class="planet">🌙</div>
+</div>
+
+<div class="orbit orbit2">
+<div class="planet">🪐</div>
+</div>
+
+<div class="orbit orbit3">
+<div class="planet">⭐</div>
+</div>
+
+<div class="center">
 
 <img
 src="IMG-20260529-WA0018.jpg"
-class="photo">
+onclick="revealMessage()">
 
-<br>
-
-<button onclick="location.href='beginning.html'">
-💬 Continue The Story
-</button>
 </div>
+
+<div
+class="message"
+id="message">
+
+💌
+
+Welcome to
+
+<b>The Universe Of Syeda Sheza</b>
+
+🩵✨🌙
+
+Where memories orbit endlessly...
+
+Where smiles become stars...
+
+And where even the smallest moments become part of a beautiful story.
+
+🌹🦋💫
+
+</div>
+
+<button
+onclick="location.href='firstconversation.html'">
+
+✨ Begin The Journey
+
+</button>
 
 <script>
 
-for(let i=0;i<120;i++){
+function revealMessage(){
 
-let star=document.createElement("div");
+document
+.getElementById(
+"message"
+)
+.style.display=
+"block";
+
+}
+
+for(let i=0;i<300;i++){
+
+let star=
+document.createElement("div");
 
 star.className="star";
 
 star.innerHTML="⭐";
 
-star.style.left=Math.random()*100+"vw";
+star.style.left=
+Math.random()*100+"vw";
 
-star.style.top=Math.random()*100+"vh";
+star.style.top=
+Math.random()*100+"vh";
+
+star.style.animationDuration=
+(2+Math.random()*5)+"s";
 
 document.body.appendChild(star);
 
 }
 
-let emojis=[
-"🩵",
-"🌹",
+const items=[
 "🦋",
-"💫",
+"🌹",
 "✨",
+"🩵",
+"💫",
 "🌙"
 ];
 
-for(let i=0;i<60;i++){
+for(let i=0;i<100;i++){
 
-let e=document.createElement("div");
+let e=
+document.createElement("div");
 
-e.className="floating";
+e.className="float";
 
 e.innerHTML=
-emojis[
+items[
 Math.floor(
-Math.random()*emojis.length
+Math.random()*items.length
 )
 ];
 
@@ -191,7 +381,10 @@ e.style.left=
 Math.random()*100+"vw";
 
 e.style.animationDuration=
-(8+Math.random()*10)+"s";
+(8+Math.random()*12)+"s";
+
+e.style.animationDelay=
+Math.random()*10+"s";
 
 document.body.appendChild(e);
 
