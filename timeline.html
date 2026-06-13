@@ -3,7 +3,7 @@
 
 <head>
 
-<title>⏳ Our Timeline ⏳</title>
+<title>⏳ Our Journey ⏳</title>
 
 <style>
 
@@ -22,37 +22,42 @@ overflow:hidden;
 }
 
 h1{
-margin-top:40px;
-font-size:50px;
+margin-top:30px;
+font-size:55px;
+text-shadow:
+0 0 15px white,
+0 0 30px #60a5fa;
 }
 
-.card{
+.timeline{
+padding:20px;
+position:relative;
+z-index:10;
+}
+
+.event{
 
 background:rgba(255,255,255,0.08);
 
-width:85%;
-
-max-width:600px;
+padding:25px;
 
 margin:25px auto;
 
-padding:25px;
+width:85%;
+
+max-width:650px;
 
 border-radius:25px;
+
+font-size:28px;
 
 backdrop-filter:blur(10px);
 
 }
 
-.date{
-font-size:28px;
-margin-top:10px;
-}
-
-.counter{
-font-size:22px;
-margin-top:15px;
-color:#93c5fd;
+.arrow{
+font-size:40px;
+margin:10px;
 }
 
 button{
@@ -67,7 +72,7 @@ font-size:18px;
 
 cursor:pointer;
 
-margin-top:25px;
+margin-top:20px;
 
 }
 
@@ -92,31 +97,73 @@ animation:twinkle 3s infinite;
 ⏳ Our Journey ⏳
 </h1>
 
-<div class="card">
+<div class="timeline">
 
-<h2>💬 First Conversation</h2>
+<div class="event">
 
-<div class="date">
+💬
+
+<br><br>
+
 26 November 2025
+
+<br><br>
+
+✨ The Beginning
+
 </div>
 
-<div id="counter1" class="counter">
-Loading...
+<div class="arrow">
+⬇
 </div>
 
-</div>
+<div class="event">
 
-<div class="card">
+❤️
 
-<h2>🩵 Relationship Started</h2>
+<br><br>
 
-<div class="date">
 20 January 2026
+
+<br><br>
+
+🌹 Relationship Started
+
 </div>
 
-<div id="counter2" class="counter">
-Loading...
+<div class="arrow">
+⬇
 </div>
+
+<div class="event">
+
+🤝
+
+<br><br>
+
+21 March 2026
+
+<br><br>
+
+🩵 First Handshake
+
+</div>
+
+<div class="arrow">
+⬇
+</div>
+
+<div class="event">
+
+🌙
+
+<br><br>
+
+Today
+
+<br><br>
+
+✨ Still Making Memories
 
 </div>
 
@@ -126,9 +173,11 @@ Loading...
 
 </button>
 
+</div>
+
 <script>
 
-for(let i=0;i<120;i++){
+for(let i=0;i<180;i++){
 
 let star=document.createElement("div");
 
@@ -143,29 +192,6 @@ star.style.top=Math.random()*100+"vh";
 document.body.appendChild(star);
 
 }
-
-function updateCounters(){
-
-let now=new Date();
-
-let first=new Date("2025-11-26");
-
-let relation=new Date("2026-01-20");
-
-let diff1=Math.floor((now-first)/(1000*60*60*24));
-
-let diff2=Math.floor((now-relation)/(1000*60*60*24));
-
-document.getElementById("counter1").innerHTML=
-"🩵 " + diff1 + " days together";
-
-document.getElementById("counter2").innerHTML=
-"❤️ " + diff2 + " days since relationship";
-}
-
-updateCounters();
-
-setInterval(updateCounters,1000);
 
 </script>
 
