@@ -3,49 +3,93 @@
 
 <head>
 
-<title>🫀 I'm Sorry 🫀</title>
+<title>💌 A Letter For You 💌</title>
 
 <style>
 
 body{
 margin:0;
-height:100vh;
+font-family:Arial,sans-serif;
 background:linear-gradient(
 to bottom,
-#000814,
-#001d3d
+#020617,
+#0f172a,
+#1e293b
 );
-font-family:Arial,sans-serif;
 color:white;
 text-align:center;
 overflow:hidden;
 }
 
-.container{
-padding-top:80px;
-max-width:800px;
-margin:auto;
-position:relative;
-z-index:10;
-}
-
 h1{
-font-size:60px;
+margin-top:30px;
+font-size:50px;
 }
 
-.text{
-font-size:28px;
-line-height:2;
-padding:20px;
+.subtitle{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.envelope{
+
+font-size:180px;
+
+cursor:pointer;
+
+margin-top:30px;
+
+transition:0.5s;
+
+}
+
+.envelope:hover{
+
+transform:scale(1.1);
+
+}
+
+.letter{
+
+display:none;
+
+background:white;
+
+color:black;
+
+max-width:800px;
+
+margin:30px auto;
+
+padding:30px;
+
+border-radius:20px;
+
+font-size:24px;
+
+line-height:1.8;
+
+box-shadow:
+0 0 30px white;
+
 }
 
 button{
+
 padding:15px 30px;
+
 border:none;
+
 border-radius:30px;
+
 font-size:18px;
+
 cursor:pointer;
-margin-top:20px;
+
+margin-top:25px;
+
+display:none;
+
 }
 
 .star{
@@ -65,13 +109,21 @@ animation:twinkle 3s infinite;
 
 <body>
 
-<div class="container">
-
 <h1>
-🫀 I'm Sorry 🫀
+💌 A Letter For You 💌
 </h1>
 
-<div class="text">
+<div class="subtitle">
+🥺 Tap the envelope...
+</div>
+
+<div class="envelope" onclick="openLetter()">
+💌
+</div>
+
+<div id="letter" class="letter">
+
+<h2>Dear Syeda Sheza 🩵</h2>
 
 For my words... 😔
 
@@ -89,17 +141,29 @@ For my restrictions... 😔
 
 <br><br>
 
-And for every time I hurt you... 🩵
+For every moment where my insecurities got the better of me... 😔
+
+<br><br>
+
+And for every time I hurt you...
+
+I am truly sorry. 🩵
+
+<br><br>
+
+No matter what happened,
+
+please know that you have always been important to me.
+
+🌙🩵✨
 
 </div>
 
-<button onclick="location.href='final.html'">
+<button id="nextBtn" onclick="location.href='final.html'">
 
-🌙 Continue
+🌙 Final Message →
 
 </button>
-
-</div>
 
 <script>
 
@@ -116,6 +180,16 @@ star.style.left=Math.random()*100+"vw";
 star.style.top=Math.random()*100+"vh";
 
 document.body.appendChild(star);
+
+}
+
+function openLetter(){
+
+document.querySelector(".envelope").innerHTML="📭";
+
+document.getElementById("letter").style.display="block";
+
+document.getElementById("nextBtn").style.display="inline-block";
 
 }
 
